@@ -10,6 +10,8 @@ const Nav = () => {
       console.log(window.innerWidth);
       if (window.innerWidth < 500) {
         setMobile(true);
+      } else if (window.innerWidth > 500) {
+        setMobile(false);
       }
     }
   }, []);
