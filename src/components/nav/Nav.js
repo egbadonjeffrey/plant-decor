@@ -4,33 +4,51 @@ import "./Nav.css";
 
 const Nav = () => {
   const [mobile, setMobile] = useState(false);
+  const [dimension, setDimension] = useState({ width: window.innerWidth });
 
   useEffect(() => {
     if (window !== undefined) {
       console.log(window.innerWidth);
-      if (window.innerWidth < 500) {
-        setMobile(true);
-      } else if (window.innerWidth > 500) {
-        setMobile(false);
-      }
+      const handleResize = () => {
+        setDimension({
+          width: window.innerWidth,
+        });
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
     }
   }, []);
 
-  console.log(window.innerWidth);
+  useEffect(() => {
+    if (dimension.width < 500) {
+      setMobile(true);
+    } else if (dimension.width > 500) {
+      setMobile(false);
+    }
+  }, [dimension]);
+
+  console.log(dimension.width);
+  console.log(mobile);
 
   return (
-    <div className="nav-container">
+    <>
       {mobile ? (
-        <div>
-          <ul className="mobile-navMenu">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>Menu</li>
-          </ul>
+        <div className="nav-container">
+          <div>
+            <ul className="mobile-navMenu">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>Menu</li>
+            </ul>
+          </div>
         </div>
       ) : (
-        <>
+        <div className="nav-container">
           <ul className="nav-menu">
             <li>
               <Link to="/">Home</Link>
@@ -46,10 +64,10 @@ const Nav = () => {
             </li>
           </ul>
 
-          <div className="cart">Cart</div>
-        </>
+          <span className="cart">Cart</span>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
