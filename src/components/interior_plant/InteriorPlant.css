@@ -1,0 +1,109 @@
+.interior-plant {
+    
+}
+.interior-plant h2, .interior-plant p  {
+    text-align: center;
+}
+.interior-plant h2 {
+    font-size: 64px;
+    font-weight: 500;
+    margin: 0;
+}
+@media screen and (max-width: 800px) {
+   .interior-plant h2 {
+    font-size: 40px;
+   } 
+}
+@media screen and (max-width: 500px) {
+    .interior-plant h2 {
+        /* font-size: 30px; */
+    }
+}
+.interior-plant p {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: #4F4F4F;
+}
+@media screen and (max-width: 500px) {
+    .interior-plant p {
+        font-size: 16px;
+    }
+}
+.interior-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 80vh;
+}
+@media screen and (max-width: 500px) {
+    .interior-container {
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+.interior-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 80vh;
+}
+@media screen and (max-width: 500px) {
+    .interior-left {
+        width: 100%;
+    }
+}
+.interior-left .living-room {
+    position: relative;
+    background-image: url('../../images/banner_flower3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top right;
+    width: 100%;
+    height: 50%;
+}
+ .overlay {
+    background: rgba(128, 128, 128, 0.561);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    border-radius: 1.8rem;
+    opacity: 0;
+    transition: all ease 300ms;
+}
+ .overlay:hover {
+    opacity: 1;
+}
+.interior-left .work-station {
+    position: relative;
+    background-image: url('../../images/banner_flower2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top right;
+    width: 100%;
+    height: 50%;
+}
+.interior-right {
+    position: relative;
+    background-image: url('../../images/banner_flower1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top right;
+    width: 40%;
+    height: 100%;
+}
+@media screen and (max-width: 500px) {
+    .interior-right {
+        width: 100%;
+    }
+}

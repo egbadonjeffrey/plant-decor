@@ -1,0 +1,52 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    margin: 2rem 0;
+}
+.nav-container div {
+    width: 100%;
+}
+.mobile-navMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+}
+.mobile-navMenu li {
+    list-style: none;
+}
+.mobile-navMenu li a {
+    text-decoration: none;
+    color: #fff;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+.nav-menu li {
+    list-style-type: none;
+}
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: bold;
+}
+.nav-menu li a:hover {
+    background: linear-gradient(to right, #2AF598 0%, #009EFD 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cart {
+    justify-self: flex-end;
+    padding-right: 3rem;
+}

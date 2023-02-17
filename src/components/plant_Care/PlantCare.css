@@ -1,0 +1,103 @@
+.plant-care-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 80%;
+    margin: 4rem auto;
+}
+@media screen and (max-width: 1030px) {
+    .plant-care-container  {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+.plant-care-description {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+@media screen and (max-width: 1030px) {
+    .plant-care-description {
+        width: 100%;
+    }
+}
+.plant-care-description .intro h2 {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 0;
+}
+@media screen and (max-width: 1500px) {
+    .plant-care-description .intro h2 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .plant-care-description .intro h2 {
+        text-align: center;
+    }
+}
+.plant-care-description .intro p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #4F4F4F;
+}
+@media  screen and (max-width: 800px) {
+    .plant-care-description .intro p {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .plant-care-description .intro p {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+.plant-care-image img {
+    width: 100%;
+}
+.care-list ul {
+    padding: 0;
+}
+.care-list ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+@media screen and (max-width: 1500px) {
+    .care-list ul li img  {
+        width: 3rem;
+    }
+}
+.care-list ul li .title h2 {
+    font-weight: 500;
+}
+@media screen and (max-width: 1500px) {
+    .care-list ul li .title h2  {
+        margin-bottom: .5rem;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .care-list ul li .title h2 {
+        font-size: 23px;
+        margin-bottom: .3rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .care-list ul li .title h2 {
+        font-size: 23px;
+        margin-bottom: .5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .care-list ul li .title h2 {
+        font-weight: 400;
+    }
+}
+.care-list ul li .title p {
+    margin: 0;
+    color: #4F4F4F;
+}
