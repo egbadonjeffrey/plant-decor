@@ -16,6 +16,8 @@ const Nav = () => {
     }
   }, []);
 
+  console.log(window.innerWidth);
+
   return (
     <div className="nav-container">
       {mobile ? (
