@@ -37,12 +37,12 @@ const Nav = () => {
   console.log(mobile);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
       {mobile && (
         <div
           className="mobile-menu"
           style={{
-            right: menu ? "0" : "-500px",
+            left: menu ? "0" : "-500px",
           }}
         >
           <ul className="menu-items">
@@ -98,7 +98,7 @@ const Nav = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
