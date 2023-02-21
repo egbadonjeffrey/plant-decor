@@ -12,6 +12,7 @@
 @media screen and (max-width: 500px) {
    .banner-container {
     height: 60vh;
+    background-position: center 100%;
    } 
 }
 .banner-container::after {

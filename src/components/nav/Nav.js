@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import { AiOutlineMenu } from "react-icons/ai";
+import { BsFillBagFill } from "react-icons/bs";
+import PlantLogo from "../../images/plant-logo.png";
 
 const Nav = () => {
   const [mobile, setMobile] = useState(false);
@@ -37,42 +39,61 @@ const Nav = () => {
   console.log(mobile);
 
   return (
-    <div style={{ position: "relative" }}>
-      {mobile && (
-        <div
-          className="mobile-menu"
-          style={{
-            left: menu ? "0" : "-500px",
-          }}
-        >
-          <ul className="menu-items">
-            <li
-              onClick={() => setMenu(false)}
-              style={{ position: "absolute", top: "10px", right: "10px" }}
-            >
-              {" "}
-              [X]{" "}
-            </li>
-            <li>Shop</li>
-            <li>About Us</li>
-            <li>Contact</li>
-            <li style={{ position: "absolute", bottom: "40px" }}>Cart</li>
-          </ul>
-        </div>
-      )}
+    <>
       <div>
         {mobile ? (
           <div className="nav-container">
+            {mobile && (
+              <div
+                className="mobile-menu"
+                style={{
+                  left: menu ? "0" : "-500px",
+                }}
+              >
+                <ul className="menu-items">
+                  <li
+                    onClick={() => setMenu(false)}
+                    style={{ position: "absolute", top: "10px", right: "10px" }}
+                  >
+                    [X]
+                  </li>
+                  <li>Shop</li>
+                  <li>About Us</li>
+                  <li>Contact</li>
+                  <li style={{ position: "absolute", bottom: "40px" }}>
+                    <BsFillBagFill />
+                  </li>
+                </ul>
+              </div>
+            )}
             <div>
               <ul className="mobile-navMenu" style={{ position: "relative" }}>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link
+                    to="/"
+                    style={{
+                      color: "#fff",
+                      fontSize: "2rem",
+                      fontWeight: "600",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    P
+                  </Link>
                 </li>
-                <li>
+                <li
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
                   <AiOutlineMenu
                     style={{ width: "1.3rem", height: "1.3rem" }}
                     onClick={() => setMenu(true)}
                   />
+                  <BsFillBagFill />
                 </li>
               </ul>
             </div>
@@ -94,11 +115,13 @@ const Nav = () => {
               </li>
             </ul>
 
-            <span className="cart">Cart</span>
+            <span className="cart">
+              <BsFillBagFill />
+            </span>
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
 
