@@ -98,16 +98,18 @@ const Nav = () => {
                 <li
                   style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "row-reverse",
                     alignItems: "center",
                     gap: "1rem",
                   }}
                 >
                   <AiOutlineMenu
-                    style={{ width: "1.3rem", height: "1.3rem" }}
+                    style={{ width: "1.7rem", height: "1.7rem" }}
                     onClick={handleMenu}
                   />
-                  <BsFillBagFill />
+                  <BsFillBagFill
+                    style={{ width: "1.5rem", height: "1.5rem" }}
+                  />
                 </li>
               </ul>
             </div>
