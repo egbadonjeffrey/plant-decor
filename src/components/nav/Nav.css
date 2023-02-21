@@ -58,8 +58,8 @@
 
 /* Mobile Menu */
 .mobile-menu {
-    position: absolute;
-    top: -32px;
+    position: fixed;
+    top: 0;
     color: white;
     background: black;
     height: 100vh;

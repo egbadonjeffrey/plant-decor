@@ -35,8 +35,20 @@ const Nav = () => {
     }
   }, [dimension]);
 
-  console.log(dimension.width);
-  console.log(mobile);
+  // console.log(dimension.width);
+  // console.log(mobile);
+
+  const handleMenu = () => {
+    setMenu(true);
+    const { body } = document;
+    body.style.overflow = "hidden";
+  };
+
+  const menuClose = () => {
+    setMenu(false);
+    const { body } = document;
+    body.style.overflow = "";
+  };
 
   return (
     <>
@@ -52,7 +64,7 @@ const Nav = () => {
               >
                 <ul className="menu-items">
                   <li
-                    onClick={() => setMenu(false)}
+                    onClick={menuClose}
                     style={{ position: "absolute", top: "10px", right: "10px" }}
                   >
                     [X]
@@ -60,7 +72,9 @@ const Nav = () => {
                   <li>Shop</li>
                   <li>About Us</li>
                   <li>Contact</li>
-                  <li style={{ position: "absolute", bottom: "40px" }}>
+                  <li
+                    style={{ position: "absolute", top: "15px", left: "10px" }}
+                  >
                     <BsFillBagFill />
                   </li>
                 </ul>
@@ -91,7 +105,7 @@ const Nav = () => {
                 >
                   <AiOutlineMenu
                     style={{ width: "1.3rem", height: "1.3rem" }}
-                    onClick={() => setMenu(true)}
+                    onClick={handleMenu}
                   />
                   <BsFillBagFill />
                 </li>
