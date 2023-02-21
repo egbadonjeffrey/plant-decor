@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Nav = () => {
   const [mobile, setMobile] = useState(false);
+  const [menu, setMenu] = useState(false);
   const [dimension, setDimension] = useState({ width: window.innerWidth });
 
   useEffect(() => {
@@ -36,37 +38,66 @@ const Nav = () => {
 
   return (
     <>
-      {mobile ? (
-        <div className="nav-container">
-          <div>
-            <ul className="mobile-navMenu">
+      {mobile && (
+        <div
+          className="mobile-menu"
+          style={{
+            right: menu ? "0" : "-500px",
+          }}
+        >
+          <ul className="menu-items">
+            <li
+              onClick={() => setMenu(false)}
+              style={{ position: "absolute", top: "10px", right: "10px" }}
+            >
+              {" "}
+              [X]{" "}
+            </li>
+            <li>Shop</li>
+            <li>About Us</li>
+            <li>Contact</li>
+            <li style={{ position: "absolute", bottom: "40px" }}>Cart</li>
+          </ul>
+        </div>
+      )}
+      <div>
+        {mobile ? (
+          <div className="nav-container">
+            <div>
+              <ul className="mobile-navMenu" style={{ position: "relative" }}>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <AiOutlineMenu
+                    style={{ width: "1.3rem", height: "1.3rem" }}
+                    onClick={() => setMenu(true)}
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <div className="nav-container">
+            <ul className="nav-menu">
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>Menu</li>
+              <li>
+                <Link to="/">Shop</Link>
+              </li>
+              <li>
+                <Link to="/">About Us</Link>
+              </li>
+              <li>
+                <Link to="/">Contact</Link>
+              </li>
             </ul>
-          </div>
-        </div>
-      ) : (
-        <div className="nav-container">
-          <ul className="nav-menu">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Shop</Link>
-            </li>
-            <li>
-              <Link to="/">About Us</Link>
-            </li>
-            <li>
-              <Link to="/">Contact</Link>
-            </li>
-          </ul>
 
-          <span className="cart">Cart</span>
-        </div>
-      )}
+            <span className="cart">Cart</span>
+          </div>
+        )}
+      </div>
     </>
   );
 };

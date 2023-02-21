@@ -61,7 +61,8 @@
 @media screen and (max-width: 500px) {
     .hero-text h1 {
         width: 90%;
-        font-size: 30px;
+        font-size: 20px;
+        margin-top: -40px
     }
 }
 .hero-text p {
@@ -76,7 +77,8 @@
 }
 @media screen and (max-width: 500px) {
     .hero-text p {
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: 0;
         width: 90%;
     }
 }
@@ -95,6 +97,7 @@
 @media screen and (max-width: 500px) {
     .banner-search {
         width: 70vw;
+        height: 5vh;
         margin: 1rem 0;
     }
 }
@@ -144,4 +147,11 @@
     margin-left: -10rem;
     background: linear-gradient(90deg, rgba(42,245,152,1) 35%, rgba(0,158,253,1) 100%);
     cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .search-image-container {
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 3px;
+    }
 }

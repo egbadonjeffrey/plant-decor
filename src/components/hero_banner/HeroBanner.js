@@ -6,7 +6,7 @@ import { FiSearch } from "react-icons/fi";
 const HeroBanner = () => {
   return (
     <div className="banner-container">
-      <div className="nav">
+      <div className="nav" style={{ position: "relative" }}>
         <Nav />
       </div>
 
