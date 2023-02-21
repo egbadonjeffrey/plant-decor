@@ -28,6 +28,8 @@
 @media screen and (max-width: 500px) {
     .interior-plant p {
         font-size: 16px;
+        width: 90%;
+        margin: 2rem auto;
     }
 }
 .interior-container {

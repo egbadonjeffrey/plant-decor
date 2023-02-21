@@ -100,7 +100,7 @@ const Nav = () => {
                     display: "flex",
                     flexDirection: "row-reverse",
                     alignItems: "center",
-                    gap: "1rem",
+                    gap: "2rem",
                   }}
                 >
                   <AiOutlineMenu
@@ -131,8 +131,27 @@ const Nav = () => {
               </li>
             </ul>
 
-            <span className="cart">
-              <BsFillBagFill />
+            <span className="cart" style={{ position: "relative" }}>
+              <BsFillBagFill style={{ width: "1.5rem", height: "1.5rem" }} />
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-.3rem",
+                  left: "1rem",
+                  width: "1.3rem",
+                  height: "1.3rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  borderRadius: "50%",
+                  background: "red",
+                  color: "white",
+                }}
+              >
+                5
+              </span>
             </span>
           </div>
         )}
