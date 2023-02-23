@@ -21,7 +21,20 @@ const Cart = () => {
           left: openCart ? "0" : "-2000px",
         }}
       >
-        <h1>Cart</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "0 .6rem",
+          }}
+        >
+          <h1>Cart</h1>
+          <span style={{ fontSize: "2rem" }} onClick={showCart}>
+            [x]
+          </span>
+        </div>
+
         {cart.length < 1 ? (
           <div className="emptyCart">Cart is empty</div>
         ) : (
