@@ -1,12 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../nav/Nav";
 import "./HeroBanner.css";
 import { FiSearch } from "react-icons/fi";
+import priceCircle from "../../images/point-product.png";
+import descriptionBubble from "../../images/description_bubble.png";
 
 const HeroBanner = () => {
+  const [dracena, setDracena] = useState(false);
+  const [petal, setPetal] = useState(false);
+  const [rose, setRose] = useState(false);
   return (
     <div className="banner-container">
-      <div className="nav" style={{ position: "relative" }}>
+      <div className="effect-div-left">
+        {dracena && (
+          <div className="dracena-bubble">
+            <span>$65.00</span>
+            <span>Dracena Fragnas</span>
+          </div>
+        )}
+        <img
+          src={priceCircle}
+          alt="top-point"
+          onClick={() => alert("Price is $10")}
+        />
+        {rose && (
+          <div className="rose-bubble">
+            <span>$65.00</span>
+            <span>Rose Fragnas</span>
+          </div>
+        )}
+        <img
+          src={priceCircle}
+          className="bottom-point"
+          alt="bottom-point"
+          onClick={() => alert("Price is $10")}
+        />
+      </div>
+      <div className="effect-div-right">
+        {petal && (
+          <div className="petal-bubble">
+            <span>$65.00</span>
+            <span>Petal Fragnas</span>
+          </div>
+        )}
+        <img
+          src={priceCircle}
+          alt="point"
+          onClick={() => alert("Price is $10")}
+        />
+      </div>
+      <div className="nav">
         <Nav />
       </div>
 

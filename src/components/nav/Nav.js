@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsFillBagFill } from "react-icons/bs";
 import PlantLogo from "../../images/plant-logo.png";
+import { CartContext } from "../../context/Cart";
+import Cart from "../cart/Cart";
 
 const Nav = () => {
   const [mobile, setMobile] = useState(false);
   const [menu, setMenu] = useState(false);
   const [dimension, setDimension] = useState({ width: window.innerWidth });
+  const { cart, openCart, showCart } = useContext(CartContext);
 
   useEffect(() => {
     if (window !== undefined) {
@@ -75,7 +78,31 @@ const Nav = () => {
                   <li
                     style={{ position: "absolute", top: "15px", left: "10px" }}
                   >
-                    <BsFillBagFill />
+                    <span className="cart" style={{ position: "relative" }}>
+                      <BsFillBagFill
+                        className="cart-icon"
+                        style={{ width: "1.5rem", height: "1.5rem" }}
+                      />
+                      <span
+                        style={{
+                          position: "absolute",
+                          top: "-.3rem",
+                          left: "1rem",
+                          width: "1.3rem",
+                          height: "1.3rem",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          fontSize: "14px",
+                          fontWeight: "bold",
+                          borderRadius: "50%",
+                          background: "red",
+                          color: "white",
+                        }}
+                      >
+                        {cart.length}
+                      </span>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -100,16 +127,42 @@ const Nav = () => {
                     display: "flex",
                     flexDirection: "row-reverse",
                     alignItems: "center",
-                    gap: "2rem",
+                    gap: "1rem",
                   }}
                 >
                   <AiOutlineMenu
                     style={{ width: "1.7rem", height: "1.7rem" }}
                     onClick={handleMenu}
                   />
-                  <BsFillBagFill
-                    style={{ width: "1.5rem", height: "1.5rem" }}
-                  />
+                  <span className="cart" style={{ position: "relative" }}>
+                    <BsFillBagFill
+                      className="cart-icon"
+                      style={{
+                        width: "1.5rem",
+                        height: "1.5rem",
+                      }}
+                    />
+                    <span
+                      style={{
+                        position: "absolute",
+                        top: "-.3rem",
+                        left: "1rem",
+                        width: "1.3rem",
+                        height: "1.3rem",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        borderRadius: "50%",
+                        background: "red",
+                        color: "white",
+                      }}
+                      onClick={showCart}
+                    >
+                      {cart.length}
+                    </span>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -132,7 +185,11 @@ const Nav = () => {
             </ul>
 
             <span className="cart" style={{ position: "relative" }}>
-              <BsFillBagFill style={{ width: "1.5rem", height: "1.5rem" }} />
+              <BsFillBagFill
+                className="cart-icon"
+                style={{ width: "1.5rem", height: "1.5rem" }}
+                onClick={showCart}
+              />
               <span
                 style={{
                   position: "absolute",
@@ -150,7 +207,7 @@ const Nav = () => {
                   color: "white",
                 }}
               >
-                5
+                {cart.length}
               </span>
             </span>
           </div>

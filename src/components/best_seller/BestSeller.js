@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./BestSeller.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import Flower1 from "../../images/flower1.png";
-import Flower2 from "../../images/flower2.png";
-import Flower3 from "../../images/flower3.png";
+import data from "../../data";
+import { CartContext } from "../../context/Cart";
 
 const BestSeller = () => {
+  // const [cart, setCart] = useState([]);
+  const { flowers } = data;
+  const { handleAddToCart, cart } = useContext(CartContext);
+
+  console.log(cart);
+
   return (
     <div className="best-seller-container">
       <div className="best-seller-content best-seller-text">
@@ -20,54 +25,24 @@ const BestSeller = () => {
         </div>
       </div>
       <div className="best-seller-content best-seller-products">
-        <div className="product">
-          <div className="product-image-container">
-            <img src={Flower1} alt="thumbnail one" />
-          </div>
-          <div className="product-image-description">
-            <div className="product-title">
-              <span>Cammile</span>
-              <div>Stars</div>
+        {flowers.map((flower, index) => (
+          <div className="product" key={index}>
+            <div className="product-image-container">
+              <img src={flower.image} alt="thumbnail one" />
             </div>
+            <div className="product-image-description">
+              <div className="product-title">
+                <span>{flower.name}</span>
+                <div>Stars</div>
+              </div>
 
-            <div className="price-add-action">
-              <span>$65</span>
-              <span>+</span>
+              <div className="price-add-action">
+                <span>${flower.price}</span>
+                <span onClick={() => handleAddToCart(flower)}>+</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="product">
-          <div className="product-image-container">
-            <img src={Flower2} alt="thumbnail one" />{" "}
-          </div>{" "}
-          <div className="product-image-description">
-            <div className="product-title">
-              <span>Cammile</span>
-              <div>Stars</div>
-            </div>
-
-            <div className="price-add-action">
-              <span>$65</span>
-              <span>+</span>
-            </div>
-          </div>
-        </div>
-        <div className="product">
-          <div className="product-image-container">
-            <img src={Flower3} alt="thumbnail one" />
-          </div>
-          <div className="product-image-description">
-            <div className="product-title">
-              <span>Cammile</span>
-              <div>Stars</div>
-            </div>
-
-            <div className="price-add-action">
-              <span>$65</span>
-              <span>+</span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

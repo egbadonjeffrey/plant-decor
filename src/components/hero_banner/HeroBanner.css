@@ -1,5 +1,5 @@
 .nav {
-    /* display: none; */
+    position: relative;
 }
 .banner-container {
     position: relative;
@@ -15,7 +15,7 @@
     background-position: center 100%;
    } 
 }
-.banner-container::after {
+/* .banner-container::after {
     background: white;
     content: '';
     position: absolute;
@@ -24,7 +24,183 @@
     width: 100%;
     transform: rotate(180deg);
     filter: blur(33px);
+} */
+.effect-div-left {
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 20%;
 }
+.dracena-bubble {
+    background-image: url('../../images/description_bubble.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1rem;
+    height: 120px;
+    width: 205px;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+.dracena-bubble span {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+.dracena-bubble span:last-of-type {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.rose-bubble {
+    background-image: url('../../images/description_bubble.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1rem;
+    height: 120px;
+    width: 205px;
+    margin-top: 26px;
+    margin-left: 56px;
+}
+.rose-bubble span {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+.rose-bubble span:last-of-type {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.petal-bubble {
+    background-image: url('../../images/description_bubble.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1rem;
+    height: 120px;
+    width: 205px;
+    margin-top: -61px;
+    margin-left: 50px;
+}
+.petal-bubble span {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+.petal-bubble span:last-of-type {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.effect-div-left img:first-of-type {
+    position: absolute;
+    top: 98px;
+    left: 84px;
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width: 1030px) {
+    .effect-div-left img:first-of-type {
+        top: 89px;
+        left: 71px;
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .effect-div-left img:first-of-type {
+        left: 50px;
+        width: 30px;
+        height: 30px;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 500px) {
+    .effect-div-left img:first-of-type {
+        top: 52px;
+        left: 30px;
+        width: 25px;
+        height: 25px;
+        z-index: 5;
+    }
+}
+.effect-div-left img:last-of-type {
+    position: absolute;
+    top: 37%;
+    right: 80px; 
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width: 1030px) {
+    .effect-div-left img:last-of-type {
+        right: 60px;
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .effect-div-left img:last-of-type {
+        right: 45px;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .effect-div-left img:last-of-type {
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.effect-div-right {
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 20%;
+}
+.effect-div-right img {
+    position: absolute;
+    top: 20%;
+    right: 90px; 
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width: 1030px) {
+    .effect-div-right img {
+        right: 70px;
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .effect-div-right img {
+        right: 50px;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .effect-div-right img {
+        right: 25px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
 .banner-intro {
     display: flex;
     flex-direction: column;
@@ -38,6 +214,7 @@
     align-items: center;
     text-align: center;
     color: #fff;
+    z-index: 5;
 }
 @media screen and (max-width: 500px) {
     .hero-text {
@@ -94,6 +271,7 @@
     height: 6vh;
     border: 1px solid #ccc;
     border-radius: 40px;
+    z-index: 4;
 }
 @media screen and (max-width: 500px) {
     .banner-search {

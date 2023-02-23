@@ -53,9 +53,9 @@
 }
 .cart {
     justify-self: flex-end;
-    padding-right: 3rem;
+    padding-right: 1rem;
+    cursor: pointer;
 }
-
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
