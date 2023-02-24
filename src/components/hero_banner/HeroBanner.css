@@ -34,18 +34,37 @@
     width: 20%;
 }
 .dracena-bubble {
-    background-image: url('../../images/description_bubble.png');
-    background-repeat: no-repeat;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     gap: 1rem;
-    height: 120px;
-    width: 205px;
+    height: 100px;
+    width: 190px;
+    border: 1px solid #fff;
+    border-radius: 30px;
     margin-top: -20px;
     margin-left: 20px;
+    backdrop-filter: blur(10px);
+    z-index: 10;
 }
+.dracena-bubble span {
+    z-index: 5;
+}
+@media screen and (max-width: 800px) {
+   .dracena-bubble {
+    margin-top: -26px;
+    margin-left: 10px;
+   } 
+}
+@media screen and (max-width: 500px) {
+    .dracena-bubble {
+     margin-top: -60px;
+     margin-left: 10px;
+    } 
+ }
+
 .dracena-bubble span {
     padding-left: 1rem;
     font-size: 1.3rem;
@@ -57,19 +76,36 @@
     font-weight: 500;
 }
 .rose-bubble {
-    background-image: url('../../images/description_bubble.png');
-    background-repeat: no-repeat;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     gap: 1rem;
-    height: 120px;
-    width: 205px;
-    margin-top: 26px;
-    margin-left: 56px;
+    height: 100px;
+    width: 190px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    margin-top: 150px;
+    margin-left: 100px;
+    backdrop-filter: blur(8px);
 }
+@media screen and (max-width: 1030px) {
+   .rose-bubble {
+        margin-top: 120px;
+        margin-left: 90px;
+   } 
+}
+@media screen and (max-width: 800px) {
+    .rose-bubble {
+        margin-left: 37px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .rose-bubble {
+     margin-left: 80px;
+    } 
+ }
 .rose-bubble span {
     padding-left: 1rem;
     font-size: 1.3rem;
@@ -81,23 +117,46 @@
     font-weight: 500;
 }
 .petal-bubble {
-    background-image: url('../../images/description_bubble.png');
-    background-repeat: no-repeat;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     gap: 1rem;
-    height: 120px;
-    width: 205px;
-    margin-top: -61px;
-    margin-left: 50px;
+    height: 100px;
+    width: 190px;
+    border: 1px solid #fff;
+    border-radius: 35px;
+    margin-top: -42px;
+    margin-left: 0px;
+    backdrop-filter: blur(10px);
 }
 .petal-bubble span {
     padding-left: 1rem;
     font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
+}
+@media screen and (max-width: 1030px) {
+    .petal-bubble {
+        margin-top: -30px;
+        margin-left: -69px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .petal-bubble {
+        height: 100px;
+        width: 190px;
+        margin-top: -30px;
+        margin-left: -80px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .petal-bubble {
+        margin-top: -50px;
+        margin-left: -130px;
+        z-index: 90;
+    }
 }
 .petal-bubble span:last-of-type {
     font-size: 1rem;

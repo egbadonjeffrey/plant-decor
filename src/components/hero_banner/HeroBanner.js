@@ -3,7 +3,6 @@ import Nav from "../nav/Nav";
 import "./HeroBanner.css";
 import { FiSearch } from "react-icons/fi";
 import priceCircle from "../../images/point-product.png";
-import descriptionBubble from "../../images/description_bubble.png";
 
 const HeroBanner = () => {
   const [dracena, setDracena] = useState(false);
@@ -14,6 +13,7 @@ const HeroBanner = () => {
       <div className="effect-div-left">
         {dracena && (
           <div className="dracena-bubble">
+            <div className="blur"></div>
             <span>$65.00</span>
             <span>Dracena Fragnas</span>
           </div>
@@ -21,7 +21,7 @@ const HeroBanner = () => {
         <img
           src={priceCircle}
           alt="top-point"
-          onClick={() => alert("Price is $10")}
+          onClick={() => setDracena(!dracena)}
         />
         {rose && (
           <div className="rose-bubble">
@@ -33,7 +33,7 @@ const HeroBanner = () => {
           src={priceCircle}
           className="bottom-point"
           alt="bottom-point"
-          onClick={() => alert("Price is $10")}
+          onClick={() => setRose(!rose)}
         />
       </div>
       <div className="effect-div-right">
@@ -43,11 +43,7 @@ const HeroBanner = () => {
             <span>Petal Fragnas</span>
           </div>
         )}
-        <img
-          src={priceCircle}
-          alt="point"
-          onClick={() => alert("Price is $10")}
-        />
+        <img src={priceCircle} alt="point" onClick={() => setPetal(!petal)} />
       </div>
       <div className="nav">
         <Nav />

@@ -55,6 +55,7 @@
 @media screen and (max-width: 800px) {
     .best-seller-action {
         margin-bottom: 4rem;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 500px) {
@@ -70,6 +71,14 @@
 @media screen and (max-width: 800px) {
     .best-seller-text h3 {
         margin: 0;
+        text-align: center;
+    }
+    .best-seller-action span:hover {
+        text-decoration: underline;
+        text-align: center;
+    }
+    .arrow {
+        display: none;
     }
 }
 .best-seller-text span {

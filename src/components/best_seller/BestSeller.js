@@ -7,9 +7,9 @@ import { CartContext } from "../../context/Cart";
 const BestSeller = () => {
   // const [cart, setCart] = useState([]);
   const { flowers } = data;
-  const { handleAddToCart, cart } = useContext(CartContext);
+  const { handleAddToCart } = useContext(CartContext);
 
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <div className="best-seller-container">
