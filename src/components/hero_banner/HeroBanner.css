@@ -189,15 +189,20 @@
 .effect-div-left img:first-of-type {
     position: absolute;
     top: 98px;
-    left: 84px;
+    left: 130px;
     width: 50px;
     height: 50px;
     z-index: 6;
 }
 @media screen and (width: 2560px) {
     .effect-div-left img:first-of-type {
-    margin-left: 110px;
+    margin-left: 62px;
     margin-top: 20px;
+    }
+}
+@media screen and (width: 1440px) {
+    .effect-div-left img:first-of-type {
+        left: 100px;
     }
 }
 @media screen and (max-width: 1030px) {
@@ -228,17 +233,21 @@
 .effect-div-left img:last-of-type {
     position: absolute;
     top: 37%;
-    right: 80px; 
+    right: 112px; 
     width: 50px;
     height: 50px;
 }
 @media screen and (width: 2560px) {
     .effect-div-left img:last-of-type {
         right: 170px;
-
     }
 }
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1500px) {
+    .effect-div-left img:last-of-type {
+        right: 90px;
+    }
+}
+@media screen and (width: 1024px) {
     .effect-div-left img:last-of-type {
         right: 60px;
         width: 35px;
@@ -271,13 +280,18 @@
 .effect-div-right img {
     position: absolute;
     top: 20%;
-    right: 90px; 
+    right: 130px; 
     width: 50px;
     height: 50px;
 }
 @media screen and (width: 2560px) {
     .effect-div-right img {
         right: 200px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .effect-div-right img {
+        right: 90px;
     }
 }
 @media screen and (max-width: 1030px) {
