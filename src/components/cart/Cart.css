@@ -31,6 +31,11 @@
     padding: 2rem;
     margin: 1rem;
 }
+@media screen and (max-width: 500px) {
+    .cartItem {
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 800px) {
     .cartItem {
         gap: 1rem;
@@ -50,6 +55,11 @@
 .itemDescription img {
     width: 4rem;
     height: 4rem;
+}
+@media screen and (max-width: 500px) {
+    .itemDescription img {
+        margin: 0 auto;
+    }
 }
 .itemNamePrice {
     flex: 0.5;

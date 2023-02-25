@@ -20,6 +20,16 @@
     gap: 2rem;
     flex-basis: auto;
 }
+@media screen and (max-width: 1030px) {
+    .perk {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        flex-basis: auto;
+    }
+}
 @media screen and (max-width: 800px) {
     .perk {
         display: flex;

@@ -40,6 +40,7 @@ footer {
 @media  screen and (max-width: 500px) {
     .footer-links {
         flex-direction: column;
+        text-align: center;
         width: 100%;
     }
 }
@@ -173,6 +174,12 @@ footer {
     background: linear-gradient(90deg, rgba(42,245,152,1) 35%, rgba(0,158,253,1) 100%);
     color: #fff;
     cursor: pointer;
+}
+@media screen and (width: 2560px) {
+    .newsletter-button-container {
+        right: 6px;
+        height: 4.2rem;
+    }
 }
 @media  screen and (max-width: 1500px) {
     .newsletter-button-container {

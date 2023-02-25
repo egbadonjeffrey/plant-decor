@@ -52,6 +52,12 @@
 .dracena-bubble span {
     z-index: 5;
 }
+@media screen and (width: 2560px) {
+    .dracena-bubble {
+        margin-top: -10px;
+    margin-left: 170px;
+    }
+}
 @media screen and (max-width: 800px) {
    .dracena-bubble {
     margin-top: -26px;
@@ -89,6 +95,18 @@
     margin-top: 150px;
     margin-left: 100px;
     backdrop-filter: blur(8px);
+}
+@media screen and (width: 2560px) {
+    .rose-bubble {    
+        margin-top: 210px;
+        margin-left: 280px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .rose-bubble {
+    margin-top: 120px;
+    margin-left: 150px;
+    }
 }
 @media screen and (max-width: 1030px) {
    .rose-bubble {
@@ -137,6 +155,12 @@
     font-weight: 700;
     color: #fff;
 }
+@media screen and (width: 2560px) {
+    .petal-bubble {
+        margin-top: 0px;
+    margin-left: 120px;
+    }
+}
 @media screen and (max-width: 1030px) {
     .petal-bubble {
         margin-top: -30px;
@@ -168,6 +192,13 @@
     left: 84px;
     width: 50px;
     height: 50px;
+    z-index: 6;
+}
+@media screen and (width: 2560px) {
+    .effect-div-left img:first-of-type {
+    margin-left: 110px;
+    margin-top: 20px;
+    }
 }
 @media screen and (max-width: 1030px) {
     .effect-div-left img:first-of-type {
@@ -200,6 +231,12 @@
     right: 80px; 
     width: 50px;
     height: 50px;
+}
+@media screen and (width: 2560px) {
+    .effect-div-left img:last-of-type {
+        right: 170px;
+
+    }
 }
 @media screen and (max-width: 1030px) {
     .effect-div-left img:last-of-type {
@@ -237,6 +274,11 @@
     right: 90px; 
     width: 50px;
     height: 50px;
+}
+@media screen and (width: 2560px) {
+    .effect-div-right img {
+        right: 200px;
+    }
 }
 @media screen and (max-width: 1030px) {
     .effect-div-right img {
@@ -385,6 +427,12 @@
     margin-left: -10rem;
     background: linear-gradient(90deg, rgba(42,245,152,1) 35%, rgba(0,158,253,1) 100%);
     cursor: pointer;
+}
+@media screen and (width: 2560px) {
+   .search-image-container {
+    width: 3.3rem;
+    height: 3.5rem;
+   } 
 }
 @media screen and (max-width: 500px) {
     .search-image-container {
