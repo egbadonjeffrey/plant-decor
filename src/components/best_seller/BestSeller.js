@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 import "./BestSeller.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { RiStarSFill } from "react-icons/ri";
 import data from "../../data";
 import { CartContext } from "../../context/Cart";
+import Stars from "react-stars";
 
 const BestSeller = () => {
   // const [cart, setCart] = useState([]);
@@ -33,7 +35,12 @@ const BestSeller = () => {
             <div className="product-image-description">
               <div className="product-title">
                 <span>{flower.name}</span>
-                <div>Stars</div>
+                <div className="rating">
+                  {" "}
+                  {flower.stars.map((i, index) => (
+                    <RiStarSFill key={index} style={{ color: "#F2C94C" }} />
+                  ))}
+                </div>
               </div>
 
               <div className="price-add-action">

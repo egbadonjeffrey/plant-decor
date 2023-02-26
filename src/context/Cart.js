@@ -10,6 +10,7 @@ export const CartContextProvider = ({ children }) => {
     const exist = cart.find((x) => x.id === flower.id);
 
     if (exist) {
+      alert(`Added  ${flower.name} to cart`);
       setCart(
         cart.map((x) =>
           x.id === flower.id
@@ -21,6 +22,7 @@ export const CartContextProvider = ({ children }) => {
         )
       );
     } else {
+      alert(`Added  ${flower.name} to cart`);
       setCart([
         ...cart,
         {
@@ -36,7 +38,9 @@ export const CartContextProvider = ({ children }) => {
 
     if (exist.quantity === 1) {
       setCart(cart.filter((x) => x.id !== flower.id));
+      alert(`Removed ${flower.quantity} ${flower.name} to cart`);
     } else {
+      alert(`Removed ${flower.quantity} ${flower.name} to cart`);
       setCart(
         cart.map((x) =>
           x.id === flower.id

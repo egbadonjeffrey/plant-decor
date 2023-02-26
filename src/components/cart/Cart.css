@@ -15,12 +15,15 @@
         width: 100vw;
     }
 }
-.cartContainer h1 {
-    text-align: center;
+.cartContainer div h1 {
+    margin: 0 auto;
 }
-.cartContainer div {
-    margin-bottom: 3rem;
+@media screen and (max-width: 500px) {
+    .cartContainer .cartItemContainer {
+    margin-bottom: 5rem;
 }
+}
+
 .emptyCart {
     text-align: center;
     font-size: 25px;

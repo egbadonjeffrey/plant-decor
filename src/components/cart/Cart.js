@@ -38,7 +38,7 @@ const Cart = () => {
         {cart.length < 1 ? (
           <div className="emptyCart cartItem">Cart is empty</div>
         ) : (
-          <div>
+          <div className="cartItemContainer">
             {cart.map((item) => (
               <div className="cartItem" key={item.id}>
                 <div className="itemDescription">
