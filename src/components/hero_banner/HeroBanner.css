@@ -193,6 +193,7 @@
     width: 50px;
     height: 50px;
     z-index: 6;
+    cursor: pointer;
 }
 @media screen and (width: 2560px) {
     .effect-div-left img:first-of-type {
@@ -236,6 +237,7 @@
     right: 112px; 
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 @media screen and (width: 2560px) {
     .effect-div-left img:last-of-type {
@@ -283,6 +285,7 @@
     right: 130px; 
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 @media screen and (width: 2560px) {
     .effect-div-right img {

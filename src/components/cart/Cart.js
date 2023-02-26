@@ -30,7 +30,10 @@ const Cart = () => {
           }}
         >
           <h1>Cart</h1>
-          <span style={{ fontSize: "2rem" }} onClick={showCart}>
+          <span
+            style={{ fontSize: "2rem", cursor: "pointer" }}
+            onClick={showCart}
+          >
             [x]
           </span>
         </div>
